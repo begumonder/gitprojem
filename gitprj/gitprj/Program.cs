@@ -10,7 +10,7 @@ namespace gitprj
     {
         static void Main(string[] args)
         {
-            int sayi = 0;
+            int sayi = 1;
             while (sayi < 11)
             {
                 Console.WriteLine(sayi + ".sayı");
