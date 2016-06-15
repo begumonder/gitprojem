@@ -108,4 +108,4 @@ buradaki 1b2e1d63ff yayımlanacak yazılım sürümünüzün işlem numarasını
 `git log`
 
 ##PROJEDE KULLANDIĞIM PROGRAM HAKKINDA
-Bu programın amacı 1'den 10'a kadar olan sayıları ekrana yazdırmak.Program için c# kullandım.
+Bu programın amacı 1'den 10'a kadar olan sayıları ekrana yazdırmak.Program için c# kullandım.Bu programı yazmamın amacı git işlemlerinden, git komutlarından öğrendiklerimi aktarmak.
