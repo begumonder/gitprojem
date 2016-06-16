@@ -58,11 +58,15 @@ git ceheckout:Projemiz üzerine önceden yapmış olduğumuz çalışmaları gö
 
 `git checkout -b gitprojem`
 
-git fetch:Değişiklikleri geri amla için kllanacağımız komuttur.
+git fetch:Değişiklikleri geri almak için kllanacağımız komuttur.Fetch değişikliklerimizi geri alır ancak local değişikliklerimizi değiştirmeden geri alıma işlemi yapar, pull edersek değiştirir.
 
 `git fetch origin master`
 
-master branchdeki değişikliklerinizi deri alır.
+master branchdeki değişikliklerinizi değiştirmeden geri alır.
+
+`git fetch pull`
+
+değişikliklerinizi değiştirerek geri alma işlemi yapar.
 
 ##BRANCH(DALLANMA)
 Yeni bir proje oluşturduğunuzda her zaman aktif bir branch üzerinde çalışırsınız.Aktif branchi bozmadan yeni bir çalışma yapmak istediğinizde kullanıcağınız yöntem ise aktif branch dışında yeni bir alt branch eklemek.Örneğin bir proje yaptığınızı varsayalım projenizde master branchi etkileyebileceğini düşündüğünüz bir çalışma yapmak istiyor olun.Bu durumda master branchin etkilenmemesi için yeni bir alt branch ekleyip onun üzerinde çalışma yapabilirsiniz.
