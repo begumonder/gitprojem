@@ -17,6 +17,7 @@ Git dağıtık versiyon kontrol sistemlerinin en yaygın olanıdır.Gitte dosyal
 Dosyalarınız üzerinde değişiklik yapılır.
 Dosyalarınız hazırlık alanına eklenir.
 Hazırılık alanındaki son halleri alınıp Git klasörüne kalıcı olarak depolanır.
+
 ##GİTİN BAZI KOMUTLARI 
 Add:projemizdeki değişiklikleri gite eklememize yarar.
 
@@ -46,6 +47,8 @@ git clone:Yerel ya da uzak sunucuda bulunan projenizi bulunduğunuz dizine kopya
 git ceheckout:Projemiz üzerine önceden yapmış olduğumuz çalışmaları görmek istediğimizde kullanacağımız komuttur. 
 
 `git checkout -b gitprojem`
+
+
 
 ##BRANCH(DALLANMA)
 Yeni bir proje oluşturduğunuzda her zaman aktif bir branch üzerinde çalışırsınız.Aktif branchi bozmadan yeni bir çalışma yapmak istediğinizde kullanıcağınız yöntem ise aktif branch dışında yeni bir alt branch eklemek.Örneğin bir proje yaptığınızı varsayalım projenizde master branchi etkileyebileceğini düşündüğünüz bir çalışma yapmak istiyor olun.Bu durumda master branchin etkilenmemesi için yeni bir alt branch ekleyip onun üzerinde çalışma yapabilirsiniz.
@@ -95,6 +98,23 @@ Eğer tüm yerel değişiklik ve teslimlerinizi iptal etmek istiyorsanız
 git fetch origin
 git reset --hard origin/master
 </code>
+
+##GİT GEÇMİŞE GİTME
+Yaptığınız çalışmalarada geriye dönmek istediğinizde kullanacağınız komutlardır.
+
+git show:Yaptığınız değişiklikleri gösterir.
+
+`git show`
+
+gi show komutunun başka kullanım şekilleri de vardır.
+
+`git show 217c9eb0077`
+
+kullanacağınız ilk bir kaç kararkter yeterlidir.Bu komut ile görmek istediğiniz değişikliğe gidebilirsiniz.
+
+`git show HEAD`
+
+bu komut ile aktif dalda yaptığınz değişiklikleri görebilirsiniz.
 
 ##SÜRÜMLEMEK 
 Yazılım sürümlerini oluşturmak için sürüm adı oluştururuz.
