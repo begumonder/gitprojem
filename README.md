@@ -12,11 +12,15 @@ Dağıtık versiyon kontrol sistemlerinde birden fazla yerel depo ve birden fazl
 
 Git dağıtık versiyon kontrol sistemlerinin en yaygın olanıdır.Gitte dosyalarınız tek bir sunucu üzerinde değil birden çok sunucu üzerinde tutulur.
 
+![resim](https://raw.githubusercontent.com/begumonder/gitprojem/master/resim/resim2.png)
+
 ##GİTİN İŞLEYİŞ BİÇİMİ?
 
 Dosyalarınız üzerinde değişiklik yapılır.
 Dosyalarınız hazırlık alanına eklenir.
 Hazırılık alanındaki son halleri alınıp Git klasörüne kalıcı olarak depolanır.
+
+![resim2](https://raw.githubusercontent.com/begumonder/gitprojem/master/resim/resim.jpg)
 
 ##GİTİN BAZI KOMUTLARI 
 Add:projemizdeki değişiklikleri gite eklememize yarar.
@@ -34,7 +38,13 @@ Remote:dosyalarımızı sunucuya göndermemizi sağlar.push ile remote edilir.
 git push:yaptığınız değişiklikleri uzak sunucuya göndermenizi sağlar.Bir projeyi push etmek istediğinizde size kulanıcı adı ve şifre
 sorar eğer bilgileri doğru girerseniz ve projeye yazma izniniz var ise deişiklikleriniz push edilir.
 
-`git push origin master`
+`git push`
+
+tüm değişiklikleri uzak sunucuya göndermenizi sağlar.
+
+`git push origin master` 
+
+master branchdeki değişiklikleri uzak sunucuya göndermenizi sağlar.
 
 git pull:uzak sunucuda değişikliğe uğramış ya da yeni eklenmis dosya varsa bunları indirir ve yereldeki proje ile birleştirir.
 
@@ -48,7 +58,15 @@ git ceheckout:Projemiz üzerine önceden yapmış olduğumuz çalışmaları gö
 
 `git checkout -b gitprojem`
 
+git fetch:Değişiklikleri geri almak için kllanacağımız komuttur.Fetch değişikliklerimizi geri alır ancak local değişikliklerimizi değiştirmeden geri alıma işlemi yapar, pull edersek değiştirir.
 
+`git fetch origin master`
+
+master branchdeki değişikliklerinizi değiştirmeden geri alır.
+
+`git fetch pull`
+
+değişikliklerinizi değiştirerek geri alma işlemi yapar.
 
 ##BRANCH(DALLANMA)
 Yeni bir proje oluşturduğunuzda her zaman aktif bir branch üzerinde çalışırsınız.Aktif branchi bozmadan yeni bir çalışma yapmak istediğinizde kullanıcağınız yöntem ise aktif branch dışında yeni bir alt branch eklemek.Örneğin bir proje yaptığınızı varsayalım projenizde master branchi etkileyebileceğini düşündüğünüz bir çalışma yapmak istiyor olun.Bu durumda master branchin etkilenmemesi için yeni bir alt branch ekleyip onun üzerinde çalışma yapabilirsiniz.
