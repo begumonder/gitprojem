@@ -17,6 +17,7 @@ namespace gitprj
                 sayi++;
             }
             Console.WriteLine("asdsdf");
+            Console.WriteLine("begüm");
             Console.ReadLine();
         }
 
