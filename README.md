@@ -107,7 +107,6 @@ değişikliklerden sonra dosyaları eklemek için
 ##GİTHUB NEDİR?
 Git ile github aynı şey değildir.Git bir versiyon kontrol sistemidir.(Dağıtık versiyon kontrol sistemi de denir) Github ise  versiyon kontrol sistemleri için uzak bir depodur(repository).
 
-
 ##PULL REQUEST
 Başka birisinin yaptığı projeyi alıp üzerinde çalışmalar yapıp proje sahibinden yaptığımız çalışmaları projeye çekmesini  isteğimiz işlemdir.Pull requst git ya da github ile gelen bir yaklaşım değildir.Pull request birden çok servisin kullanılmasıyla yapılmaktadır.(Git ve Github..)Örneğin başkasının projesinde bir değişiklik yapmak istiyor olalım.Bu durumda projeyi fork edip kendi bilgisayarımıza klonlarız.Klonlama işleminden sonra push işlemini yaparız.Projenin üzerinde değişikliklerimizi yapıp proje saahibine pull request isteginde bulunuruz eğer proje sahibi kabul ederse değişikliklerimizi projesine eklemiş olur.Peki ya biz klonlama işleminden sonra proje sahibi projede bir değişiklik yapsaydı ne yapmamız gerekirdi?İşte bu durumda bizde ana projedeki değişikliği almak için fetch ve upstream komutlarını kullanırız.Fetch uzak dedpodaki değişiklikleri çekerek kendi makinenize almamıza yarayan komuttur.upstream ise proje bağlantısına yeni isim vererek eklememize yarar.
 
@@ -150,7 +149,7 @@ Daha sonra master dalında olup olmadığımızı kontrol edip makinemizdeki mas
 ![resim6](https://raw.githubusercontent.com/begumonder/gitprojem/master/resim/resim6.png)
 
 ##GİT-DEĞİŞİKLİKLERİ GERİ ALMA
-Projeniz üzerinde çalışma yaparken eğer kaydı çok erken yapmışsanız, bazı dosyaları eklemeyi unutmuşsanız ya da kayıt mesajında hata yapmışsanız, gibi durumlarda kaydı değiştirmek zorunda kalabilirsiniz.
+Projeniz üzerinde çalışma yaparken eğer kaydı çok erken yapmışsanız, bazı dosyaları eklemeyi unutmuşsanız ya da kayıt mesajında hata yapmışsanız bu durumlarda kaydı değiştirmek zorunda kalabilirsiniz.
 
 son kaydı geri alır
 
