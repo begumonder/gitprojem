@@ -102,7 +102,9 @@ değişikliklerden sonra dosyaları eklemek için
 Git ile github aynı şey değildir.Git bir versiyon kontrol sistemidir.(Dağıtık versiyon kontrol sistemi de denir) Github ise  versiyon kontrol sistemleri için uzak bir depodur(repository).
 
 ##PULL REQUEST
-Başka birisinin yaptığı projeyi alıp üzerinde çalışmalar yapıp proje sahibinden yaptığımız çalışmaları projeye çekmesini  isteğimiz işlemdir.Pull requst git ya da github ile gelen bir yaklaşım değildir.Pull request birden çok servisin kullanılmasıyla yapılmaktadır.(Git ve Github..)Örneğin başkasının projesinde bir değişiklik yapmak istiyor olalım.Bu durumda projeyi fork edip kendi bilgisayarımıza klonlarız.Klonlama işleminden sonra push işlemini yaparız.Projenin üzerinde değişikliklerimizi yapıp proje saahibine pull request isteginde bulunuruz eğer proje sahibi kabul ederse değişikliklerimizi projesine eklemiş olur.Peki ya biz klonlama işleminden sonra proje sahibi projede bir değişiklik yapsaydı ne yapmamız gerekirdi?İşte bu durumda bizde ana projedeki değişikliği almak için fetch ve upstream komutlarını kullanırız.Fetch uzak dedpodaki değişiklikleri çekerek kendi makinenize almamıza yarayan komuttur.upstream ise proje bağlantısına yeni isim vererek eklememize yarar.
+Başka birisinin yaptığı projeyi alıp üzerinde çalışmalar yapıp proje sahibinden yaptığımız çalışmaları projeye çekmesini  isteğimiz işlemdir.Pull requst git ya da github ile gelen bir yaklaşım değildir.Pull request birden çok servisin kullanılmasıyla yapılmaktadır.(Git ve Github..)Örneğin başkasının projesinde bir değişiklik yapmak istiyor olalım.Bu durumda projeyi fork edip kendi bilgisayarımıza klonlarız.Klonlama işleminden sonra push işlemini yaparız.Projenin üzerinde değişikliklerimizi yapıp proje saahibine pull request isteginde bulunuruz eğer proje sahibi kabul ederse değişikliklerimizi projesine eklemiş olur.Peki ya biz klonlama işleminden sonra proje sahibi projede bir değişiklik yapsaydı ne yapmamız gerekirdi?İşte bu durumda bizde ana projedeki değişikliği almak için fetch ve upstream komutlarını kullanırız. uzak dedpodaki değişiklikleri çekerek kendi makinenize almamıza yarayan komuttur.upstream ise proje bağlantısına yeni isim vererek eklememize yarar.
+
+önce projeyi forklayıp klonluyoruz  ve projede değişiklikler yapıyoruz.
 
 `git clone https://github.com/Y/ABC.git`
 
@@ -122,6 +124,8 @@ Başka birisinin yaptığı projeyi alıp üzerinde çalışmalar yapıp proje s
 
 `git push origin`
 
+Projemizde değişiklikler yaptığımız esnada proje sahibi projede değişiklik yaparsa bizimde o değişiklikleri kendi makinemize almamız gerekir.Bunun için önce remote -v kodu ile upstream olup olmadığını kontrol ediyoruz.
+
 `git remote -v`
  
 `origin  https://github.com/Y/ABC.git (fetch)`
@@ -132,13 +136,15 @@ Başka birisinin yaptığı projeyi alıp üzerinde çalışmalar yapıp proje s
 
 `upstream        https://github.com/X/ABC.git (push)`
 
-Daha sonra master dalında olup olmadığımızı kontrol edip makinemizdeki master dalı ile upstreamdeki msater dalını birleştiriyoruz.Bu şekide hem uzak depoda hem de lokaldeki proje bilgilerinin son halini almış oluyoruz.
+Daha sonra master dalında olup olmadığımızı kontrol edip makinemizdeki master dalı ile upstreamdeki master dalını birleştiriyoruz.Bu şekide hem uzak depoda hem de lokaldeki proje bilgilerinin son halini almış oluyoruz.
 
 `git checkout master # master dalına geçiliyor`
 
 `git fetch upstream # uzaktaki projenin tüm verileri çekiliyor`
 
 `git merge upstream/master # uzak depodaki master dalındaki değişiklikler birleştiriliyor.`
+
+Değişiklikleri aldıktan sonra proje sahibine pull request isteğinde bulunuyoruz.Proje sahibi eğer kabul ederse projede yaptığımız değişiklikleri merge edip değiştirmiş oluyor.
 
 ![resim6](https://raw.githubusercontent.com/begumonder/gitprojem/master/resim/resim6.png)
 
@@ -185,3 +191,5 @@ buradaki 1b2e1d63ff yayımlanacak yazılım sürümünüzün işlem numarasını
 
 ##PROJEDE KULLANDIĞIM PROGRAM HAKKINDA
 Bu programın amacı 1'den 10'a kadar olan sayıları ekrana yazdırmak.Program için c# kullandım.Bu programı yazmamın amacı git işlemlerinden, git komutlarından öğrendiklerimi aktarmak.
+
+Hazırlayan:Begüm ÖNDER
