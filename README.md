@@ -58,15 +58,7 @@ git ceheckout:Projemiz üzerine önceden yapmış olduğumuz çalışmaları gö
 
 `git checkout -b gitprojem`
 
-git fetch:Değişiklikleri geri almak için kllanacağımız komuttur.Fetch değişikliklerimizi geri alır ancak local değişikliklerimizi değiştirmeden geri alıma işlemi yapar, pull edersek değiştirir.
 
-`git fetch origin master`
-
-master branchdeki değişikliklerinizi değiştirmeden geri alır.
-
-`git fetch pull`
-
-değişikliklerinizi değiştirerek geri alma işlemi yapar.
 
 ##BRANCH(DALLANMA)
 Yeni bir proje oluşturduğunuzda her zaman aktif bir branch üzerinde çalışırsınız.Aktif branchi bozmadan yeni bir çalışma yapmak istediğinizde kullanıcağınız yöntem ise aktif branch dışında yeni bir alt branch eklemek.Örneğin bir proje yaptığınızı varsayalım projenizde master branchi etkileyebileceğini düşündüğünüz bir çalışma yapmak istiyor olun.Bu durumda master branchin etkilenmemesi için yeni bir alt branch ekleyip onun üzerinde çalışma yapabilirsiniz.
@@ -100,8 +92,55 @@ değişikliklerden sonra dosyaları eklemek için
 ##GİTHUB NEDİR?
 Git ile github aynı şey değildir.Git bir versiyon kontrol sistemidir.(Dağıtık versiyon kontrol sistemi de denir) Github ise  versiyon kontrol sistemleri için uzak bir depodur(repository).
 
+
 ##PULL REQUEST
-Başka birisinin yaptığı projeyi alıp üzerinde çalışmalar yapıp proje sahibinden yaptığımız çalışmaları projeye çekmesini  isteğimiz işlemdir.Pull requst git ya da github ile gelen bir yaklaşım değildir.Pull request birden çok servisin kullanılmasıyla yapılmaktadır.(Git ve Github..)
+Başka birisinin yaptığı projeyi alıp üzerinde çalışmalar yapıp proje sahibinden yaptığımız çalışmaları projeye çekmesini  isteğimiz işlemdir.Pull requst git ya da github ile gelen bir yaklaşım değildir.Pull request birden çok servisin kullanılmasıyla yapılmaktadır.(Git ve Github..)Örneğin başkasının projesinde bir değişiklik yapmak istiyor olalım.Bu durumda projeyi fork edip kendi bilgisayarımıza klonlarız.Klonlama işleminden sonra push işlemini yaparız.Projenin üzerinde değişikliklerimizi yapıp proje saahibine pull request isteginde bulunuruz eğer proje sahibi kabul ederse değişikliklerimizi projesine eklemiş olur.Peki ya biz klonlama işleminden sonra proje sahibi projede bir değişiklik yapsaydı ne yapmamız gerekirdi?İşte bu durumda bizde ana projedeki değişikliği almak için fetch ve upstream komutlarını kullanırız.Fetch uzak dedpodaki değişiklikleri çekerek kendi makinenize almamıza yarayan komuttur.upstream ise proje bağlantısına yeni isim vererek eklememize yarar.
+
+<code>
+
+git clone https://github.com/Y/ABC.git
+
+ cd ABC
+
+ 1. değişiklik...
+
+ git add README.adoc;
+
+ git commit -m "1. Değişiklik"
+
+ 2. değişiklik...
+
+ git add .travis.yml
+
+ git commit -m "2. Değişiklik"
+
+ git push origin
+
+</code>
+
+<code>
+
+ git remote -v
+ 
+origin  https://github.com/Y/ABC.git (fetch)
+
+origin  https://github.com/Y/ABC.gitt (push)
+
+upstream        https://github.com/X/ABC.git (fetch)
+
+upstream        https://github.com/X/ABC.git (push)
+
+</code>
+
+Daha sonra master dalında olup olmadığımızı kontrol edip makinemizdeki master dalı ile upstreamdeki msater dalını birleştiriyoruz.Bu şekide hem uzak depoda hem de lokaldeki proje bilgilerinin son halini almış oluyoruz.
+
+<code>
+git checkout master # master dalına geçiliyor
+
+git fetch upstream # uzaktaki projenin tüm verileri çekiliyor
+
+git merge upstream/master # uzak depodaki master dalındaki değişiklikler birleştiriliyor.
+</code>
 
 ##GİT-DEĞİŞİKLİKLERİ GERİ ALMA
 Projeniz üzerinde çalışma yaparken eğer kaydı çok erken yapmışsanız, bazı dosyaları eklemeyi unutmuşsanız ya da kayıt mesajında hata yapmışsanız, gibi durumlarda kaydı değiştirmek zorunda kalabilirsiniz.
@@ -114,7 +153,9 @@ Eğer tüm yerel değişiklik ve teslimlerinizi iptal etmek istiyorsanız
 
 <code>
 git fetch origin
+
 git reset --hard origin/master
+
 </code>
 
 ##GİT GEÇMİŞE GİTME
